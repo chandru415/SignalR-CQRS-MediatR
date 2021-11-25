@@ -1,5 +1,5 @@
 using API.Installers.Extensions;
-using API.SingalRHubConfig;
+using API.SignalRHubConfig;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -41,7 +41,7 @@ namespace API
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Singal-R CQRS With MediatR APIs");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Signal-R CQRS With MediatR APIs");
             });
 
             app.UseAuthorization();

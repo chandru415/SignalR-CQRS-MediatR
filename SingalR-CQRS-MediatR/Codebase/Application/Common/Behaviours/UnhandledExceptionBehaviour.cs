@@ -24,7 +24,7 @@ namespace Application.Common.Behaviours
             {
                 var requestName = typeof(TRequest).Name;
 
-                _logger.LogError(ex, "Singal-R CQRS With MediatR APIs Request: Unhandled Exception for Request {Name} {@Request}", requestName, request);
+                _logger.LogError(ex, "Signal-R CQRS With MediatR APIs Request: Unhandled Exception for Request {Name} {@Request}", requestName, request);
 
                 throw;
             }

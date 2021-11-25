@@ -1,13 +1,5 @@
-﻿using API.SingalRHubConfig;
-using Application.Queries;
-using Infrastructure.TimerFeatures;
-using Microsoft.AspNetCore.Http;
+﻿using Application.Queries;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.SignalR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace API.Controllers
 {
@@ -25,8 +17,8 @@ namespace API.Controllers
         public IActionResult Get()
         {
             var result = Mediator.Send(new FetchChartDataQuery());
-           //  var timerManager = new TimerManager(() => _hub.Clients.All.SendAsync("transferchartdata",Mediator.Send(new FetchChartDataQuery())));
-            
+            //  var timerManager = new TimerManager(() => _hub.Clients.All.SendAsync("transferchartdata",Mediator.Send(new FetchChartDataQuery())));
+
             return Ok(new { Message = "Request Completed" });
         }
     }

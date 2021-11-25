@@ -20,7 +20,7 @@ namespace Application.Common.Behaviours
 
             var user = await GetUserID();
 
-            _logger.LogInformation("Singal-R CQRS With MediatR APIs Request: {Name} {User} {@Request}",
+            _logger.LogInformation("Signal-R CQRS With MediatR APIs Request: {Name} {User} {@Request}",
                 requestName, user, request);
         }
 

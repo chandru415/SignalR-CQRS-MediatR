@@ -1,13 +1,11 @@
-﻿using API.SingalRHubConfig;
+﻿using API.SignalRHubConfig;
 using Application.Common.Interfaces;
 using Application.Queries;
 using Domain.Entities;
 using Infrastructure.TimerFeatures;
 using MediatR;
 using Microsoft.AspNetCore.SignalR;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -22,7 +20,7 @@ namespace Application.Handlers.QHandlers
         {
             var timerManager = new AppTimerManager(() => _hub.Clients.All.SendAsync("transferchartdata", _iCharthub.FetchChartData()));
             // _hub.Clients.All.SendAsync("transferchartdata", _iCharthub.FetchChartData());
-           return _iCharthub.FetchChartData();
+            return _iCharthub.FetchChartData();
         }
     }
 }

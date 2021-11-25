@@ -11,7 +11,7 @@ namespace API.Installers.InstallServices
         {
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Singal-R CQRS With MediatR APIs", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Signal-R CQRS With MediatR APIs", Version = "v1" });
             });
         }
     }
